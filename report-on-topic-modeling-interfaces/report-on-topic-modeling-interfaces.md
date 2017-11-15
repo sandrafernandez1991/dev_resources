@@ -1,6 +1,6 @@
 ﻿# Topic Modeling Systems and Interfaces
 
-The 4Humanities "WhatEvery1Says" project conducted a comparative analysis in 2016 of the following topic modeling systems/interfaces. As a result, it chose to implement Andrew Goldstone's DFR-browser for its own work.
+The 4Humanities "WhatEvery1Says" project conducted a comparative analysis in 2016 of the following topic modeling systems and interfaces. As a result, it chose to implement Andrew Goldstone's DFR-browser for its own work.
 
 Last revised November 12, 2016.
 
@@ -21,7 +21,7 @@ Last revised November 12, 2016.
 * [TopicNets](#topicnets)
 * [TWIC](#twic)
 
-(These following were the materials that the WE1S team researchedin advance of its February 18, 2016, meeting focused on choosing and implementing a system/platform/interface for the exploration and interpretation of topic models.)
+(The following were the materials that the WE1S team researched in advance of its meeting on February 18, 2016. It focused on choosing and implementing a system, platform, and interface for the exploration and interpretation of topic models.)
 
 ***
 
@@ -29,14 +29,14 @@ Last revised November 12, 2016.
 
 * **Description**: E. Hoque and Giuseppe Carenini (2015), ["ConVisIT: Interactive Topic Modeling for Exploring Asynchronous Online Conversations"](http://www.cs.ubc.ca/~carenini/TEACHING/CPSC503-16/READINGS/iui0167-paper-SUBMITTED.pdf)
 * **Topic modeling workflow**:
-  * An all-in-one, start-to-finish system that does its own topic modeling of a corpus.
+  * An all-in-one from start-to-finish system that does its own topic modeling of a corpus.
 * **Notable interpretive features of interface**:
-1. Interactive visualization interface designed for topic modeling asynchronous conversation on the Internet (email, blog comments, etc.).
+1. Interactive visualization interface designed for topic modeling asynchronous conversation on the Internet (email, blog comments, etc.)
 1. Interface shows overall conversation (left panel in figure)
 1. Interface also shows the actual conversation (right panel in figure)
-1. "Human-in-the-loop" feature to allow humans iteratively to assess results of a topic model and tweak it interactively in a sense-making activity--e.g., change granularity of topics, merge or split topics, suppress a topic, specify that words must (or must not) be in a topic,
+1. "Human-in-the-loop" feature to allow humans iteratively to assess results of a topic model and tweak it interactively in a sense-making activity–e.g., change granularity of topics, merge or split topics, suppress a topic, specify that words must (or must not) be in a topic
 1. Has an algorithm for automatic labeling of topics. (p. 4 of PDF)
-1. Feedback on the interface was assessed through a user study.
+1. Feedback on the interface was assessed through a user study
 * **Code site**: [unknown]
 * **Notes by WE1S team**:
   * _Alan_: Can it be adapted for articles?
@@ -52,9 +52,9 @@ Last revised November 12, 2016.
 * **Description**: Andrew Goldstone, ["Dfr-Browser: Take a MALLET to Disciplinary History"](http://agoldst.github.io/dfr-browser/) (2013)
 * **Demos**: [Topics in](http://agoldst.github.io/dfr-browser/demo/) _[PMLA](http://agoldst.github.io/dfr-browser/demo/)_ | [Topics in](http://signsat40.signsjournal.org/topic-model/) _[Signs](http://signsat40.signsjournal.org/topic-model/)_ | [Hathi Trust Fiction 1920-22](http://jgoodwin.net/htb/)
 * **Topic modeling workflow**:
-  * Out of the box, Goldstone's DFR-Browser is specialized to take input from Jstor's [DFR (Data for Research)](http://about.jstor.org/service/data-for-research) service, run it through Mallet using Goldstone's companion R package, [dfrtopics](http://github.com/agoldst/dfrtopics), and then use _d3_ to generate a dynamic visual exploration interface. This start-to-finish workflow is modularized, however, allow for the use of alternative methods for generating the topic models and formatted data files that DFR-Browser expects:
-  * Instead of using Goldstone's R package to generate the Mallet topic model and then create the specially formatted data files for the DFR-Browser, a user can run Mallet and output the formattted data files entirely on the command line. (See [instructions here](https://github.com/agoldst/dfr-browser#preparing-data-files-entirely-on-the-command-line) in the Github repo.)
-  * There is also a section in the Github repo titled ["Browser data file specifications"](https://github.com/agoldst/dfr-browser#browser-data-file-specifications) that gives detailed instructions about the format and nature of the data files that DFR-Browser expects. (In principle, this should allow topic model files that were pre-generated in other ways to be converted into data files for DFR-Browser.)
+  * Out of the box, Goldstone's DFR-Browser is specialized to take input from Jstor's [DFR (Data for Research)](http://about.jstor.org/service/data-for-research) service, run it through Mallet using Goldstone's companion R package, [dfrtopics](http://github.com/agoldst/dfrtopics), and then use "_d3_" to generate a dynamic visual exploration interface. This start-to-finish workflow is modularized. However, allow for the use of alternative methods for generating the topic models and formatted data files that DFR-Browser expects:
+  * Instead of using Goldstone's R package to generate the Mallet topic model AND creating the specially formatted data files for the DFR-Browser, a user can run Mallet and output the formattted data files entirely on the command line. (See [instructions here](https://github.com/agoldst/dfr-browser#preparing-data-files-entirely-on-the-command-line) in the Github repo.)
+  * There is also a section in the Github repo titled ["Browser data file specifications"](https://github.com/agoldst/dfr-browser#browser-data-file-specifications), that gives detailed instructions about the format and nature of the data files that DFR-Browser expects. (In principle, this should allow topic model files that were pre-generated (in other ways) to be converted into data files for DFR-Browser.)
 * **Notable interpretive features of interface**: A dynamic visual exploration interface with several main views:
   * _"Overview"_ (top figure at right) showing topics as circles laid out in a regular grid, each circle labeled with the six most important words in a topic. Clicking on a topic brings the user to →
   * _"Topic" view_ (bottom figure at right) showing a ranked list of words in the topic with bars representing relative weight (left panel), a timeline graph of the topic's weight in the corpus, and a list of articles ranked by the amount of the topic infused in them.
